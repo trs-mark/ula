@@ -27,7 +27,7 @@ const ULA_DEVICE_DP_HEIGHT = ULA_DEV_H / (Titanium.Platform.displayCaps.dpi / 16
 const ULA_DEV_INDEX = _getDevIndex();
 
 const ULA_WIN_TOP = ULA_IS_IOS7 ? 20 : 0;
-const ULA_TITLE = "ULA APP";
+const ULA_TITLE = "Front page";
 
 const ULA_FONT_A = {
 	fontSize : _s(['30dp','30dp','50dp','30dp','30dp','40dp','50dp','30dp']),
