@@ -13,7 +13,7 @@ function HistoryWindow(navController){
 	
 	var rootView = Titanium.UI.createView({
 		top: 20 , right: 10, left: 10, bottom: 0,
-		backgroundColor: '#9F9F9F',
+		backgroundColor: '#F5F5F5',
 		layout: 'vertical'
 	});
 	
@@ -39,33 +39,34 @@ function HistoryWindow(navController){
 	var wordCount = Titanium.UI.createLabel({
 		text: 'Word Count: 300/1000 ',
 		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-		color: 'white',
+		color: '#B1B1B1',
 		top: 10
 	});
 	var numQuestions = Titanium.UI.createLabel({
 		text: 'Number of questions: 2500/4000 ',
 		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-		color: 'white'
+		color: '#B1B1B1'
 	});
 	var achRate = Titanium.UI.createLabel({
 		text: 'Achievement rate: 85%',
 		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-		color: 'white',
+		color: '#B1B1B1',
 		top: 10
 	});
 	
 	var tableData = [];
 	var table = Titanium.UI.createTableView({
 		top: 110,
-		backgroundColor: 'gray',
+		backgroundColor: '#CDCDCD',
 		width: '100%',
-		height: 200
+		height: 200,
+		scrollable: false
 	});
 	
 	var learningTime = Titanium.UI.createLabel({
 		text: 'Learning time \n12 hours 22 minutes',
 		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-		color: 'white',
+		color: '#B1B1B1',
 		top: 230
 	});
 	

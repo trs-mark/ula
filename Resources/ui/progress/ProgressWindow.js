@@ -13,7 +13,7 @@ function ProgressWindow(navController){
 	
 	var rootView = Titanium.UI.createView({
 		top: 15, bottom: 0, left: 10, right: 10,
-		backgroundColor: 'gray',
+		backgroundColor: '#F5F5F5',
 		layout: 'vertical'
 	});
 	
@@ -22,7 +22,7 @@ function ProgressWindow(navController){
 	 */
 	var lblTitle = Titanium.UI.createLabel({
 		text: 'Weekly learning progress \n\n1h14m32s / 5h',
-		color: 'white',
+		color: '#D8D8D8',
 		top: 15
 	});
 	

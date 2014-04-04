@@ -13,7 +13,7 @@ function SettingsWindow(navController){
 	
 	var rootView = Titanium.UI.createView({
 		top: 10, bottom: 10, left: 10, right: 10,
-		backgroundColor: 'gray',
+		backgroundColor: '#FFF',
 		layout: 'vertical'
 	});
 	
@@ -22,30 +22,38 @@ function SettingsWindow(navController){
 	 */
 	var tableData = [];
 	var table = Titanium.UI.createTableView({
-		height: 'auto'
+		height: 140,
+		borderWidth: 1,
+		borderColor: '#DADADA',
+		backgroundColor: '#DADADA',
+		scrollable: false
 	});
 	
 	var row1 = Titanium.UI.createTableViewRow({
 		title: 'The goal of learning time time 1 week',
-		backgroundColor: 'silver'
+		backgroundColor: '#FFF',
+		height: 35
 	});
 	tableData.push(row1);
 	
 	var row2 = Titanium.UI.createTableViewRow({
 		title: 'Voice',
-		backgroundColor: 'silver'
+		backgroundColor: '#FFF',
+		height: 35
 	});
 	tableData.push(row2);
 	
 	var row3 = Titanium.UI.createTableViewRow({
 		title: 'Log out',
-		backgroundColor: 'silver'
+		backgroundColor: '#FFF',
+		height: 35
 	});
 	tableData.push(row3);
 	
 	var row4 = Titanium.UI.createTableViewRow({
 		title: 'Reset of learning history    Run',
-		backgroundColor: 'silver'
+		backgroundColor: '#FFFF',
+		height: 35
 	});
 	tableData.push(row4);
 	/*

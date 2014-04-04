@@ -13,7 +13,7 @@ function CoursesWindow(navController){
 	
 	var rootView = Titanium.UI.createView({
 		top: 10, bottom: 10, left: 10, right: 10,
-		backgroundColor: '#FFF',
+		backgroundColor: '#F5F5F5',
 		layout: 'vertical'
 	});
 	
@@ -24,6 +24,7 @@ function CoursesWindow(navController){
 	var btnRestore =Titanium.UI.createButton({
 		title: 'Restore',
 		color: 'black',
+		backgroundColor: '#225CE0',
 		height: 60,
 		width: 100,
 		top: 20,
@@ -41,16 +42,19 @@ function CoursesWindow(navController){
 	var tableData = [];
 	var table = Titanium.UI.createTableView({});
 	
-	var row1 = Titanium.UI.createTableViewRow({
-		title: 'number 1'
-	});
-	tableData.push(row1);
-	row1.addEventListener('click' , function(e){
-		var CourseDetailsWindow = require('ui/courses/CourseDetailsWindow');
-		var courseDetails = new CourseDetailsWindow(navController);
-		navController.open(courseDetails);
-	});
-	
+	var row = [];
+	for(var i=0; i<10; i++){
+		row[i] = Titanium.UI.createTableViewRow({
+			title: 'number 1',
+			color: '#E3E3E3'
+		});
+		tableData.push(row[i]);
+		row[i].addEventListener('click' , function(e){
+			var CourseDetailsWindow = require('ui/courses/CourseDetailsWindow');
+			var courseDetails = new CourseDetailsWindow(navController);
+			navController.open(courseDetails);
+		});
+	}
 	/*
 	 * heirarchy
 	 */

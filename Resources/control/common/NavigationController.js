@@ -24,7 +24,7 @@ exports.NavigationController.prototype.open = function(windowToOpen, args) {
 			});
 			
 			var containerWindow = Ti.UI.createWindow({
-				backgroundColor : '#E83828'
+				backgroundColor : '#FFF'
 			});
 			containerWindow.add(this.navGroup);
 			containerWindow.open();

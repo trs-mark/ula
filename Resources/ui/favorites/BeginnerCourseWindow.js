@@ -29,19 +29,22 @@ function BeginnerCourseWindow(navController){
 	var row1 = Ti.UI.createTableViewRow({
 		title : 'To hear a voice, please select the word in question',
 		font: '10dp',
-		backgroundColor: 'gray'
+		backgroundColor: '#F5F5F5',
+		color: '#959595'
 	});
 	tableData.push(row1);
 	var row2 = Ti.UI.createTableViewRow({
 		title : 'Take the Japanese translation to sit.',
 		font: '10dp',
-		backgroundColor: 'gray'
+		backgroundColor: '#F5F5F5',
+		color: '#959595'
 	});
 	tableData.push(row2);
 	var row3 = Ti.UI.createTableViewRow({
 		title : 'Please translated into English and a sit down.',
 		font: '10dp',
-		backgroundColor: 'gray'
+		backgroundColor: '#F5F5F5',
+		color: '#959595'
 	});
 	tableData.push(row3);
 	

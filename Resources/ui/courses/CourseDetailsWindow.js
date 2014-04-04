@@ -21,7 +21,7 @@ function CourseDetailsWindow(navController){
 	
 	var buyView = Titanium.UI.createView({
 		top: '-10dp', bottom: 0 , left: 0 , right: 0,
-		backgroundColor: 'gray',
+		backgroundColor: '#F5F5F5',
 		layout: 'vertical'
 	});
 	
@@ -30,10 +30,12 @@ function CourseDetailsWindow(navController){
 	 */
 	var btnLearningSetting =Titanium.UI.createButton({
 		title: 'Learning Setting',
-		color: 'black',
+		color: '#FFF',
 		height: 30,
 		width: 150,
 		top: 15,
+		backgroundColor: '#7B93AF',
+		backgroundImage: 'none'
 	});
 	btnLearningSetting.addEventListener('click',function(e){
 		var Setting = require('ui/courses/SettingWindow');
@@ -47,7 +49,8 @@ function CourseDetailsWindow(navController){
 		height: 30,
 		color: 'white',
 		backgroundColor: 'red',
-    	backgroundImage: 'none'
+    	backgroundImage: 'none',
+    	borderRadius: 15
 	});
 	var buyAlert = Titanium.UI.createAlertDialog({
 		message: 'Are you sure?',

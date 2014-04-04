@@ -21,6 +21,9 @@ function SettingWindow(navController){
 	var btnStartLearning = Titanium.UI.createButton({
 		title: 'Learning Start',
 		top: 100,
+		backgroundColor: '#7B93AF',
+		backgroundImage: 'none',
+		color: '#FFF'
 	});
 	btnStartLearning.addEventListener('click' , function(e){
 		var BeginnerCourse = require('ui/courses/BeginnerCourseOneWindow');
@@ -32,13 +35,13 @@ function SettingWindow(navController){
 		top: 200,
 		width: '100%',
 		height: 50,
-		backgroundColor: 'gray',
+		backgroundColor: '#F5F5F5',
 		layout: 'horizontal'
 	});
 	
 	var label1 = Titanium.UI.createLabel({
 		text: 'Only word test',
-		color: 'white',
+		color: '#B8B8B8',
 		left: 5
 	});
 	var checkbox1 = Ti.UI.createButton({
@@ -50,21 +53,21 @@ function SettingWindow(navController){
 	    borderColor: '#666',
 	    borderWidth: 2,
 	    borderRadius: 3,
-	    backgroundColor: '#aaa',
+	    backgroundColor: '#FFF',
 	    backgroundImage: 'none',
-	    color: '#fff',
+	    color: '#000',
 	    font:{fontSize: 25, fontWeight: 'bold'},
 	    value: false //value is a custom property in this casehere.
 	});
 	//Attach some simple on/off actions
 	checkbox1.on = function() {
-	    this.backgroundColor = '#007690';
+	    this.backgroundColor = '#FFF';
 	    this.title='\u2713';
 	    this.value = true;
 	};
 	 
 	checkbox1.off = function() {
-	    this.backgroundColor = '#aaa';
+	    this.backgroundColor = '#FFF';
 	    this.title='';
 	    this.value = false;
 	};
@@ -80,13 +83,13 @@ function SettingWindow(navController){
 		top: 251,
 		width: '100%',
 		height: 50,
-		backgroundColor: 'gray',
+		backgroundColor: '#F5F5F5',
 		layout: 'horizontal'
 	});
 	
 	var label2 = Titanium.UI.createLabel({
 		text: 'You do not make an entry',
-		color: 'white',
+		color: '#B8B8B8',
 		left: 5
 	});
 	var checkbox2 = Ti.UI.createButton({
@@ -98,21 +101,21 @@ function SettingWindow(navController){
 	    borderColor: '#666',
 	    borderWidth: 2,
 	    borderRadius: 3,
-	    backgroundColor: '#aaa',
+	    backgroundColor: '#FFF',
 	    backgroundImage: 'none',
-	    color: '#fff',
+	    color: '#000',
 	    font:{fontSize: 25, fontWeight: 'bold'},
 	    value: false //value is a custom property in this casehere.
 	});
 	//Attach some simple on/off actions
 	checkbox2.on = function() {
-	    this.backgroundColor = '#007690';
+	    this.backgroundColor = '#FFF';
 	    this.title='\u2713';
 	    this.value = true;
 	};
 	 
 	checkbox2.off = function() {
-	    this.backgroundColor = '#aaa';
+	    this.backgroundColor = '#FFF';
 	    this.title='';
 	    this.value = false;
 	};

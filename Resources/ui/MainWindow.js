@@ -2,86 +2,93 @@
  * Main Window
  */
 function MainWindow(navController){
+	var menuFont = {
+		fontSize : '12dp',
+		fontFamily : 'Helvetica Neue', 
+		fontWeight: 'normal'
+	};
 	/*
 	 * essentials
 	 */
 	var win = Titanium.UI.createWindow({
 		top: ULA_WIN_TOP,
-		backgroundColor: '#4D4D4D',
-		navBarHidden: true
+    	barColor: '#C9516C',
+    	barImage: 'ui/imgs/navbar.png',
+    	title: 'ula menu',
+    	color: '#FFF',
+		navBarHidden: false
 	});
 	
 	var rootView = Titanium.UI.createView({
 		top: 0, bottom: 0, left: 0, right: 0,
-		backgroundColor: '#FFFFFF'/*909090*/,
+		backgroundColor: '#D2CBD6',
 		layout: 'horizontal'
 	});
-	
+	var btnView=[];
+	var btnOpen=[];
+	var menuImg=[];
+	var menu=[];
 	/*
 	 * components
 	 */
-	var lblTitle = Titanium.UI.createLabel({
-		text: ULA_TITLE,
-		color: 'white',
-		backgroundColor: 'blue',
-		font: ULA_FONT_A,
-		top: 0,
-		height: '40',
-		width: '100%',
-		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
-	});
-	
-	var btnOpen1 =Titanium.UI.createButton({
-		title: 'Courses',
-		color: 'white',
-		backgroundColor: 'gray',
-    	backgroundImage: 'none',
-		height: 65,
-		width: 130,
-		top: 30,
-		left: 10
-	});
-	var btnOpen2 =Titanium.UI.createButton({
-		title: 'Favorites',
-		color: 'black',
-		height: 65,
-		width: 130,
-		top: 30,
-		right: 10
-	});
-	var btnOpen3 =Titanium.UI.createButton({
-		title: 'History',
-		color: 'black',
-		height: 65,
-		width: 130,
-		top: 30,
-		left: 10
-	});
-	var btnOpen4 =Titanium.UI.createButton({
-		title: 'Progress',
-		color: 'black',
-		height: 65,
-		width: 130,
-		top: 30,
-		right: 10
-	});
-	var btnOpen5 =Titanium.UI.createButton({
-		title: 'Setting',
-		color: 'black',
-		height: 65,
-		width: 130,
-		top: 30,
-		left: 10
-	});
-	var btnOpen6 =Titanium.UI.createButton({
-		title: 'Online English',
-		color: 'black',
-		height: 65,
-		width: 130,
-		top: 30,
-		right: 10
-	});
-	
+	for(var i=1; i<7; i++){
+		btnView[i] = Titanium.UI.createView({
+			top: 20,
+			left: 45,
+			height: 110,
+			width: 100
+		});
+		btnOpen[i] = Titanium.UI.createButton({
+			backgroundColor: '#D2CBD6',
+			backgroundImage: 'none',
+			borderWidth: 1,
+			borderRadius: 45,
+			borderColor: '#C9516C',
+			height: 90,
+			width: 90,
+			top: 0
+		});
+
+		menuImg[i] = Titanium.UI.createImageView({
+			image: 'ui/imgs/menu'+i+'.png'
+		});
+		menu[1] = Titanium.UI.createLabel({
+			text: 'コース一覧',
+			bottom: 0,
+			font: menuFont 
+		});
+		menu[2] = Titanium.UI.createLabel({
+			text: 'お気に入り',
+			bottom: 0,
+			font: menuFont
+		});
+		menu[3] = Titanium.UI.createLabel({
+			text: '学習履歴',
+			bottom: 0,
+			font: menuFont
+		});
+		menu[4] = Titanium.UI.createLabel({
+			text: '学習進捗',
+			bottom: 0,
+			font: menuFont
+		});
+		menu[5] = Titanium.UI.createLabel({
+			text: '設定',
+			bottom: 0,
+			font: menuFont
+		});
+		menu[6] = Titanium.UI.createLabel({
+			text: 'abc-academy',
+			bottom: 0,
+			font: menuFont
+		});
+		
+		rootView.add(btnView[i]);
+		btnView[i].add(btnOpen[i]);
+		btnOpen[i].add(menuImg[i]);
+		btnView[i].add(menu[i]);
+	}
+	/*
 	btnOpen1.addEventListener('click',function(e){
 		_c('btnOpen1 clicked');
 		var CoursesWindow = require('ui/courses/CoursesWindow');
@@ -122,14 +129,6 @@ function MainWindow(navController){
 	/*
 	 * heirarchy
 	 */
-	
-	rootView.add(lblTitle);
-	rootView.add(btnOpen1);
-	rootView.add(btnOpen2);
-	rootView.add(btnOpen3);
-	rootView.add(btnOpen4);
-	rootView.add(btnOpen5);
-	rootView.add(btnOpen6);
 	
 	win.add(rootView);
 	

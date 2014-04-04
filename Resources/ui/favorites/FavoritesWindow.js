@@ -21,30 +21,34 @@ function FavoritesWindow(navController){
 	 */
 	var tableData = [];
 	var table = Titanium.UI.createTableView({
-		color: 'gray',
 		top: 5
 	});
 	
 	
 	/* Create row for tables */
-	var row1 = Ti.UI.createTableViewRow({
-		title : 'Beginner course ①',
-		backgroundColor: 'gray'
-	});
-	tableData.push(row1);
-	row1.addEventListener('click', function() {
-		var BeginnerCourseWindow = require('ui/favorites/BeginnerCourseWindow');
-		var beginnerCourseWindow = new BeginnerCourseWindow(navController);
-		navController.open(beginnerCourseWindow);
-	});
-	var row2 = Ti.UI.createTableViewRow({
+	var row=[];
+	for(var i=0; i<4; i++){
+		row[i] = Ti.UI.createTableViewRow({
+			title : 'Beginner course ①',
+			color: '#959595',
+			backgroundColor: '#F5F5F5'
+		});
+		tableData.push(row[i]);
+		row[i].addEventListener('click', function() {
+			var BeginnerCourseWindow = require('ui/favorites/BeginnerCourseWindow');
+			var beginnerCourseWindow = new BeginnerCourseWindow(navController);
+			navController.open(beginnerCourseWindow);
+		});
+	}
+	/*var row2 = Ti.UI.createTableViewRow({
 		title : 'number 2',
-		backgroundColor: 'gray'
+		color: '#959595',
+		backgroundColor: '#F5F5F5'
 	});
 	tableData.push(row2);
 	row2.addEventListener('click', function() {
 		
-	});
+	});*/
 	
 	/*
 	 * heirarchy
