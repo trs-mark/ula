@@ -17,6 +17,14 @@
     <analytics>true</analytics>
     <guid>a917553a-70f3-4c98-a482-5d99ae2817bf</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
+    <ios>
+      <plist>
+          <dict>
+              <key>UIStatusBarStyle</key>  
+              <string>UIStatusBarStyleLightContent</string>
+          </dict>
+      </plist>
+	</ios>
     <iphone>
         <orientations device="iphone">
             <orientation>Ti.UI.PORTRAIT</orientation>
@@ -46,5 +54,5 @@
         <target device="mobileweb">false</target>
         <target device="tizen">false</target>
     </deployment-targets>
-    <sdk-version>3.1.1.GA</sdk-version>
+    <sdk-version>3.2.2.GA</sdk-version>
 </ti:app>

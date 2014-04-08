@@ -7,20 +7,21 @@ function CoursesWindow(navController){
 	 */
 	var win = Titanium.UI.createWindow({
 		top: ULA_WIN_TOP,
+    	barColor: '#C9516C',
+    	barImage: 'ui/imgs/navbar.png',
 		title: 'Courses',
 		backgroundColor: '#FFF'
 	});
 	
 	var rootView = Titanium.UI.createView({
 		top: 10, bottom: 10, left: 10, right: 10,
-		backgroundColor: '#F5F5F5',
+		backgroundColor: '#FFF',
 		layout: 'vertical'
 	});
 	
 	/*
 	 * components
-	 */
-	
+	 */	
 	var btnRestore =Titanium.UI.createButton({
 		title: 'Restore',
 		color: 'black',
@@ -40,13 +41,20 @@ function CoursesWindow(navController){
 	});
 	
 	var tableData = [];
-	var table = Titanium.UI.createTableView({});
+	var table = Titanium.UI.createTableView({
+		separatorColor: 'transparent'
+	});
 	
 	var row = [];
-	for(var i=0; i<10; i++){
+	for(var i=0; i<6; i++){
 		row[i] = Titanium.UI.createTableViewRow({
-			title: 'number 1',
-			color: '#E3E3E3'
+			title: '初心者コース②　[未購入]  詳細＞',
+			color: '#949494',
+			font: {
+				fontSize: '15dp',
+				fontWeight: 'bold',
+				fontFamily: 'Helvetica Neue'
+			}
 		});
 		tableData.push(row[i]);
 		row[i].addEventListener('click' , function(e){
@@ -55,6 +63,16 @@ function CoursesWindow(navController){
 			navController.open(courseDetails);
 		});
 	}
+	
+	var backBtn = Titanium.UI.createButton({
+		title: '戻る',
+		backgroundImage: 'none',
+		backgroundColor: '#ef6e8a',
+		width: 50
+	});
+	backBtn.addEventListener('click',function(e){
+		navController.back(1);
+	});
 	/*
 	 * heirarchy
 	 */
@@ -64,6 +82,7 @@ function CoursesWindow(navController){
 	
 	win.add(rootView);
 	win.rightNavButton = btnRestore;
+	win.leftNavButton = backBtn;
 	
 	return win;
 }
