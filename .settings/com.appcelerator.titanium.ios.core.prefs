@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+iosLaunchConfigurationAttributes/ATTR_MINIFY=true
+iosLaunchConfigurationAttributes/ATTR_PROJECT_NAME=ula
+iosLaunchConfigurationAttributes/appid=ph.trd.ula
+iosLaunchConfigurationAttributes/certificate=Teppei Tokikawa (4644NZDUF6)
+iosLaunchConfigurationAttributes/keychain=
+iosLaunchConfigurationAttributes/sdk_version=7.0
+iosLaunchConfigurationAttributes/uuid=C46D2AF7-170B-4C4A-8AC0-A367EB07F834
+provisioning_profiles/development/C46D2AF7-170B-4C4A-8AC0-A367EB07F834/appid=*
+provisioning_profiles/development/C46D2AF7-170B-4C4A-8AC0-A367EB07F834/name=TRD App Team 2014 Provisioning Profile
+provisioning_profiles/development/C46D2AF7-170B-4C4A-8AC0-A367EB07F834/uuid=C46D2AF7-170B-4C4A-8AC0-A367EB07F834
